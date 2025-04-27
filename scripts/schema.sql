@@ -4,5 +4,5 @@ CREATE TABLE products (
     productDescription TEXT,
     price DECIMAL(10, 2) NOT NULL,
     inStock INT NOT NULL,
-    created At TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
