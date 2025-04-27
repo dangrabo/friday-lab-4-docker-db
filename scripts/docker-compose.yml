@@ -3,10 +3,10 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: testdb
+      MYSQL_ROOT_PASSWORD: 1234root
+      MYSQL_DATABASE: products
       MYSQL_USER: testuser
-      MYSQL_PASSWORD: testpass
+      MYSQL_PASSWORD: 1234test
     volumes:
       - ./mysql_data:/var/lib/mysql
     ports:
@@ -19,6 +19,7 @@ services:
       - db
     environment:
       PMA_HOST: db # Access mysql on "db" container
+      MYSQL_ROOT_PASSWORD: 1234root
       PMA_PORT: 3306 # Use the container port
     ports:
       - "8080:80" # Access phpMyAdmin at http://localhost:8080
